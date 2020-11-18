@@ -10,10 +10,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/about" component={About} />
-          <Route exact path="/users/:ship" render={(props) => <Users {...props} message="Hello eveyone" />} />
+          <Route path="/about" component={About} />
+          <Route path="/users/:ship" render={(props) => <Users {...props} message="Hello eveyone" />} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/strict-access" render={(props) => <StrictAccess {...props} user={{ name: 'joao', password: '1234'}} />} />
+          <Route path="/strict-access" render={(props) => <StrictAccess {...props} user={{ name: 'joao', password: '1234'}} />} />
         </Switch>
       </BrowserRouter>
     );
